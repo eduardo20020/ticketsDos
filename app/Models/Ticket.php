@@ -15,6 +15,11 @@ class Ticket extends Model
         'mensaje',
         'id_agente',
         'estado',
+        'etiqueta',
+        'tipo',
+        'prioridad',
+        'grupo',
+        'nota,'
     ];
 
     // Relación inversa a User

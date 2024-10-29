@@ -31,28 +31,59 @@
                                 class="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                                 required></textarea>
                         </div>
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-                            <div>
-                                <label for="agent" class="block text-gray-700 font-bold mb-2">Agente:</label>
-                                <select id="agent" name="id_agente"
-                                    class="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                                    required>
-                                    <option value="">Seleccione un agente</option>
-                                    <option value="1">Juan</option> <!-- Cambia el valor a un ID numérico -->
-                                    <option value="2">Pedro</option>
-                                    <option value="3">Alonso</option>
-                                </select>
+                        <div class="flex justify-between mb-4">
 
-                            </div>
+                            <!-- Agente -->
                             <div>
-                                <label for="status" class="block text-gray-700 font-bold mb-2">Estado:</label>
-                                <select id="status" name="status"
-                                    class="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                                    required>
+                                <label for="agent" class="font-semibold text-lg">Agente:</label>
+                                <select id="agent" name="agent" class="w-full border-gray-300 rounded">
+                                    <option value="1">Seleccionar agente</option>
+                                    <option value="2">Pablo</option>
+                                    <option value="3">Alma</option>
+                                    <option value="4">Brandon</option>
+                                </select>
+                            </div>
+
+                            <!-- Estado -->
+                            <div>
+                                <label for="estado" class="font-semibold text-lg">Estado:</label>
+                                <select id="estado" name="estado" class="w-full border-gray-300 rounded">
                                     <option value="abierto">Abierto</option>
                                     <option value="cerrado">Cerrado</option>
                                 </select>
                             </div>
+
+                            <!-- Tipo -->
+                            <div>
+                                <label for="tipo" class="font-semibold text-lg">Tipo:</label>
+                                <select id="tipo" name="tipo" class="w-full border-gray-300 rounded">
+                                    <option value="requerimiento">Requerimiento</option>
+                                    <option value="incidente">Incidente</option>
+                                </select>
+                            </div>
+
+                            <!-- Prioridad -->
+                            <div>
+                                <label for="prioridad" class="font-semibold text-lg">Prioridad:</label>
+                                <select id="prioridad" name="prioridad" class="w-full border-gray-300 rounded">
+                                    <option value="baja">Baja</option>
+                                    <option value="media">Media</option>
+                                    <option value="alta">Alta</option>
+                                    <option value="urgente">Urgente</option>
+                                </select>
+                            </div>
+
+                            <!-- Grupo -->
+                            <div>
+                                <label for="grupo" class="font-semibold text-lg">Grupo:</label>
+                                <select id="grupo" name="grupo" class="w-full border-gray-300 rounded">
+                                    <option value="cadereyta">Cadereyta</option>
+                                    <option value="garcia">Garcia</option>
+                                    <option value="beta">Beta</option>
+                                    <option value="pabellon">Pabellon</option>
+                                </select>
+                            </div>
+
                         </div>
                         <div class="flex justify-end">
                             <button type="submit"

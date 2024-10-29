@@ -32,7 +32,14 @@ class controllerTickets extends Controller
             "asunto" => $request->input("subject"),
             "mensaje" => $request->input("message"),
             "id_agente" => $request->input("agent"),
-            "estado" => $request->input("status"),
+            "estado" => $request->input("estado"),
+            
+
+            "etiqueta" => $request->input("etiqueta"),
+            "tipo" => $request->input("tipo"),
+            "prioridad" => $request->input("prioridad"),
+            "grupo" => $request->input("grupo"),
+            
         ]);
 
         // Redirigir a la vista del dashboard con un mensaje de éxito

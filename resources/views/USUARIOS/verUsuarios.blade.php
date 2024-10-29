@@ -13,6 +13,7 @@
                     <div class="p-6 text-gray-900">
                         <div class="flex items-center justify-between">
                             <span>Nombre: {{$usuario->name}}</span>
+                            <span>Correo: {{$usuario->email}}</span>
                             <form action="{{ route('delUsuarios', $usuario->id) }}" method="POST"
                                 onsubmit="return confirm('¿Estás seguro de que deseas eliminar este usuario?');">
                                 @csrf
