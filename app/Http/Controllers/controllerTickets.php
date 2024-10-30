@@ -100,6 +100,23 @@ class controllerTickets extends Controller
 
 
 
+    public function filtroxnumero(Request $request)
+    {
+        // Buscar el ticket por el número de filtro proporcionado
+        $ticket = Ticket::find($request->filtro);
+        // Obtener todos los agentes
+        $agentes = User::all();
+        // Verificar si el ticket no existe y retornar una vista específica si es el caso
+        if (!$ticket) {
+            return view('TICKETS.ticketNoExiste', compact('agentes'));
+        }
+
+
+
+        // Retornar la vista con el ticket y los agentes disponibles
+        return view('TICKETS.ticketxnumero', compact('ticket', 'agentes'));
+    }
+
 
 
 

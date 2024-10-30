@@ -1,5 +1,7 @@
 <x-slot name="header">
 
+
+
 <form method="GET" action="{{route('ticketsFiltrados')}}">
     <div class="flex justify-between">
         <!-- Filtro por Fecha de Creación -->

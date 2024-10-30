@@ -44,6 +44,7 @@ Route::post('/ticket/{id}', [controllerTickets::class, 'actualizarTicket'])->nam
 
 
 Route::get( '/tickett', [controllerTickets::class, 'getFiltros'])->name('ticketsFiltrados')->middleware(['auth', 'verified']);
+Route::get( '/filtrado', [controllerTickets::class, 'filtroxnumero'])->name('filtroxnumero')->middleware(['auth', 'verified']);
 
 
 
