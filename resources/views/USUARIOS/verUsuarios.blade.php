@@ -11,9 +11,12 @@
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
                 <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg item">
                     <div class="p-6 text-gray-900">
-                        <div class="flex items-center justify-between">
-                            <span>Nombre: {{$usuario->name}}</span>
-                            <span>Correo: {{$usuario->email}}</span>
+                        <div class="flex justify-between">
+
+                        <div class="container">
+                        <span>Nombre: {{$usuario->name}}</span><br>
+                        <span>Correo: {{$usuario->email}}</span>
+                        </div>
                             <form action="{{ route('delUsuarios', $usuario->id) }}" method="POST"
                                 onsubmit="return confirm('¿Estás seguro de que deseas eliminar este usuario?');">
                                 @csrf

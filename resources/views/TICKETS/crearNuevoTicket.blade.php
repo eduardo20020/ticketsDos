@@ -34,18 +34,19 @@
                         <div class="flex justify-between mb-4">
 
                             <!-- Agente -->
-                            <div>
+                            <div class="px-4">
                                 <label for="agent" class="font-semibold text-lg">Agente:</label>
                                 <select id="agent" name="agent" class="w-full border-gray-300 rounded">
-                                    <option value="1">Seleccionar agente</option>
-                                    <option value="2">Pablo</option>
-                                    <option value="3">Alma</option>
-                                    <option value="4">Brandon</option>
+                                    <option value="">Seleccionar agente</option>
+                                    
+                                    @foreach ($usuarios as $usuario)
+                                    <option value="{{$usuario->id}}">{{$usuario->name}}</option>
+                                    @endforeach
                                 </select>
                             </div>
 
                             <!-- Estado -->
-                            <div>
+                            <div class="px-4">
                                 <label for="estado" class="font-semibold text-lg">Estado:</label>
                                 <select id="estado" name="estado" class="w-full border-gray-300 rounded">
                                     <option value="abierto">Abierto</option>
@@ -54,7 +55,7 @@
                             </div>
 
                             <!-- Tipo -->
-                            <div>
+                            <div class="px-4">
                                 <label for="tipo" class="font-semibold text-lg">Tipo:</label>
                                 <select id="tipo" name="tipo" class="w-full border-gray-300 rounded">
                                     <option value="requerimiento">Requerimiento</option>
@@ -63,7 +64,7 @@
                             </div>
 
                             <!-- Prioridad -->
-                            <div>
+                            <div class="px-4">
                                 <label for="prioridad" class="font-semibold text-lg">Prioridad:</label>
                                 <select id="prioridad" name="prioridad" class="w-full border-gray-300 rounded">
                                     <option value="baja">Baja</option>
@@ -74,9 +75,10 @@
                             </div>
 
                             <!-- Grupo -->
-                            <div>
+                            <div class="px-4">
                                 <label for="grupo" class="font-semibold text-lg">Grupo:</label>
                                 <select id="grupo" name="grupo" class="w-full border-gray-300 rounded">
+                                    <option value="">Seleccionar grupo</option>
                                     <option value="cadereyta">Cadereyta</option>
                                     <option value="garcia">Garcia</option>
                                     <option value="beta">Beta</option>

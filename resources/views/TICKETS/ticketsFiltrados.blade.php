@@ -1,6 +1,6 @@
 <x-app-layout>
-    @include('layouts.filtro')
 
+    @include('layouts.filtro')
 
     @foreach ($tickets as $ticket)
     <div class="py-4">
