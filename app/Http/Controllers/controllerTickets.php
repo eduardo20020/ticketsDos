@@ -174,7 +174,7 @@ class controllerTickets extends Controller
 
     public function ticketid($id)
     {
-        $ticket = Ticket::findOrFail($id);
+        $ticket = Ticket::with('attachments')->findOrFail($id);
         $agentes = User::all();
 
         return view('TICKETS.ticket', compact('ticket', 'agentes'));

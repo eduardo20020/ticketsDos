@@ -27,4 +27,11 @@ class Ticket extends Model
     {
         return $this->belongsTo(User::class, 'id_agente');
     }
+
+
+
+    public function attachments()
+    {
+        return $this->hasMany(Attachment::class);
+    }
 }

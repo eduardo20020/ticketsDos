@@ -12,7 +12,7 @@
                     <div class="space-y-6">
                         <!-- Información General del Ticket -->
                         <div class="bg-gray-100 p-4 rounded-lg  m-6">
-                            <span class="font-semibold text-lg">{{strtoupper($ticket->asunto)}}</span> <br>
+                            <span class="font-semibold text-lg">{{mb_strtoupper($ticket->asunto, 'UTF-8')}}</span> <br>
                             <span class="font-semibold">De:</span> {{$ticket->correo}}
                         </div>
 
@@ -20,6 +20,17 @@
                         <div class="bg-gray-100 p-4 rounded-lg m-6">
                             <span class="font-semibold text-lg">Mensaje:</span>
                             <p>{{$ticket->mensaje}}</p>
+
+                            <h6>Adjuntos:</h6>
+                            @if ($ticket->attachments->isEmpty())
+                            <p>No hay adjuntos.</p>
+                            @else
+                            <ul>
+                                @foreach ($ticket->attachments as $attachment)
+                                <img src="{{ asset('storage/' . $attachment->path) }}" alt="" class="w-full max-w-xs h-auto rounded-lg shadow-md my-6">
+                                @endforeach
+                            </ul>
+                            @endif
                         </div>
 
                         <!-- Formulario de Gestión del Ticket -->
@@ -119,7 +130,7 @@
                                 </div>
                             </div>
 
-                            <button type="submit" class="btn btn-primary mt-4">Enviar</button>
+                            <button type="submit" class="bg-blue-500 text-white px-4 py-2 mt-4 rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition ease-in-out duration-150">Actualizar</button>
                         </form>
 
 

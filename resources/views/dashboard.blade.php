@@ -9,7 +9,7 @@
                 <div class="p-6 text-gray-900 flex items-center justify-between item">
                     <div class="container">
                         <a href="{{route('ticketid', $ticket->id)}}">
-                            <span class="font-semibold text-lg">{{strtoupper($ticket->asunto)}}</span> #{{$ticket->id}}
+                            <span class="font-semibold text-lg">{{mb_strtoupper($ticket->asunto, 'UTF-8')}}</span> #{{$ticket->id}}
                             <p>{{$ticket->correo}}</p><br>
                             <p>Creación: {{$ticket->created_at}}</p>
                         </a>
